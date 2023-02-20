@@ -40,6 +40,27 @@ public class SinglyLinkedList {
         current.next = newNode;
     }
 
+    //method to insert node at any position
+    public void insertAnywhere(int position, int value){
+        ListNode newNode = new ListNode(value);
+        if (position == 1){
+            newNode.next = head;
+            head = newNode;
+        } else {
+            ListNode previous = head;
+            int count = 1;
+
+            while(count < position -1){
+                previous = previous.next;
+                count ++;
+            }
+
+            ListNode current = previous.next;
+            previous.next = newNode;
+            newNode.next = current;
+        }
+    }
+
 
     //create a method to display the singly linked list
     public void display(){
