@@ -17,6 +17,13 @@ public class SinglyLinkedList {
         }
     }
 
+    //method to insert first node in a singly linked list
+    public void insertFirst(int value){
+        ListNode newNode = new ListNode(value);
+        newNode.next = head;
+        head = newNode;
+    }
+
 
     //create a method to display the singly linked list
     public void display(){
