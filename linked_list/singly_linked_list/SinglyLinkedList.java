@@ -24,6 +24,22 @@ public class SinglyLinkedList {
         head = newNode;
     }
 
+    public void insertLast(int value){
+        ListNode newNode = new ListNode(value);
+        //check if list is empty
+        if (head == null){
+            head = newNode;
+            return;
+        }
+
+        //when list is not empty
+        ListNode current = head;
+        while (current.next != null){
+            current = current.next;
+        }
+        current.next = newNode;
+    }
+
 
     //create a method to display the singly linked list
     public void display(){

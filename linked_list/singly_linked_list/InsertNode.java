@@ -11,6 +11,11 @@ public class InsertNode {
         sll.insertFirst(12);
         sll.insertFirst(34);
 
+        //call the insert first node method
+        sll.insertLast(22);
+        sll.insertLast(56);
+        sll.insertLast(30);
+
         //display the linked list
         sll.display();
     }
